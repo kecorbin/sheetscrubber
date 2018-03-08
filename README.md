@@ -31,9 +31,11 @@ value of a specific column in that row (in our case <0)
 
 1. Clone this repository
 
-  git clone https://github.com/kecorbin/sheetscrubber
-  cd sheetscrubber
+
+    git clone https://github.com/kecorbin/sheetscrubber
+    cd sheetscrubber
 
 2. Run the installation script
 
-  ./install.sh
+
+    ./install.sh
