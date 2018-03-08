@@ -31,13 +31,22 @@ value of a specific column in that row (in our case <0)
 
 1. Clone this repository
 
-```
-git clone https://github.com/kecorbin/sheetscrubber
-cd sheetscrubber
-```
+  ```
+  git clone https://github.com/kecorbin/sheetscrubber
+  cd sheetscrubber
+  ```
 
 2. Run the installation script
 
-```
-./install.sh
-```
+  ```
+  ./install.sh
+  ```
+
+
+## usage
+
+1. The installation script puts scrubber into /usr/local/bin so you should be able to run it from anywhere.
+
+  ```
+  scrubber <input.xlsx> <output.xlsx>
+  ```
