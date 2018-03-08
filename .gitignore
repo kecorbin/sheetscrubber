@@ -3,6 +3,9 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# ignore any user data
+*.xlsx
+
 # C extensions
 *.so
 
