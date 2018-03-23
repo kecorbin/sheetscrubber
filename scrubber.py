@@ -4,10 +4,6 @@ import sys
 import openpyxl
 
 
-class UselessData(Exception):
-    pass
-
-
 def usage():
     print("""
     Usage: {} <source file> <destination file>
@@ -32,8 +28,9 @@ def verify_row(row):
     try:
         for cell in row:
             if cell.column in ['K','L'] and cell.value <= 0:
-                raise UselessData()
-    except UselessData:
+                return False
+
+    except AttributeError:
         return False
 
     return True
@@ -46,7 +43,7 @@ if __name__ == '__main__':
     SOURCE_COLUMNS = ['A','B','K','L','AM','BG','BU','BY']
     DEST_COLUMNS = ['A','B','C','D','E','F','G','H']
 
-    source_wb = openpyxl.load_workbook(sys.argv[1])
+    source_wb = openpyxl.load_workbook(sys.argv[1], read_only=True)
     # assumes there is only one tab
     source_sheet = source_wb.active
     new_wb = openpyxl.Workbook()
